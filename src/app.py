@@ -50,6 +50,14 @@ def get_activities():
 @app.post("/activities/{activity_name}/signup")
 def signup_for_activity(activity_name: str, email: str):
     """Sign up a student for an activity"""
+    # Reload activities from the JSON file to ensure latest data
+    activities_file = current_dir / "activities.json"
+    if activities_file.exists():
+        with open(activities_file, "r") as f:
+            activities = json.load(f)
+    else:
+        activities = {}
+
     # Validate activity exists
     if activity_name not in activities:
         raise HTTPException(status_code=404, detail="Activity not found")
@@ -63,4 +71,9 @@ def signup_for_activity(activity_name: str, email: str):
 
     # Add student
     activity["participants"].append(email)
+
+    # Save updated activities back to the JSON file
+    with open(activities_file, "w") as f:
+        json.dump(activities, f, indent=2)
+
     return {"message": f"Signed up {email} for {activity_name}"}
