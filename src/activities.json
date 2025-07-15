@@ -1,0 +1,33 @@
+{
+  "Chess Club": {
+    "description": "Learn and play chess with fellow students.",
+    "schedule": "Fridays, 3:00 PM - 5:00 PM",
+    "max_participants": 20,
+    "participants": [
+      "thilahavanan@gmail.com",
+      "Devi.tnj@gmail.com"
+    ]
+  },
+  "Robotics Team": {
+    "description": "Design, build, and compete with robots.",
+    "schedule": "Wednesdays, 4:00 PM - 6:00 PM",
+    "max_participants": 15,
+    "participants": [
+      "thilahavanan@gmail.com"
+    ]
+  },
+  "Drama Society": {
+    "description": "Act, direct, and produce school plays.",
+    "schedule": "Mondays, 3:30 PM - 5:30 PM",
+    "max_participants": 25,
+    "participants": []
+  },
+  "Art Club": {
+    "description": "Explore painting, drawing, and sculpture.",
+    "schedule": "Thursdays, 4:00 PM - 6:00 PM",
+    "max_participants": 18,
+    "participants": [
+      "thilahavanan@gmail.com"
+    ]
+  }
+}
